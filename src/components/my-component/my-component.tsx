@@ -8,7 +8,7 @@ import { PaperRadioButtonElement } from '@polymer/paper-radio-button/paper-radio
 
 
 @Component({
-  tag: 'my-component',
+  tag: 'lauch-quiz',
   styleUrl: 'my-component.css',
   shadow: true
 })

@@ -10,7 +10,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface MyComponent {
+  interface LauchQuiz {
     'questions': { question: string; answers: { label: string; value: string; }[]; }[];
     'results': { label: string; value: string; }[];
   }
@@ -19,24 +19,24 @@ export namespace Components {
 declare global {
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLLauchQuizElement extends Components.LauchQuiz, HTMLStencilElement {}
+  var HTMLLauchQuizElement: {
+    prototype: HTMLLauchQuizElement;
+    new (): HTMLLauchQuizElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'lauch-quiz': HTMLLauchQuizElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface MyComponent {
+  interface LauchQuiz {
     'questions'?: { question: string; answers: { label: string; value: string; }[]; }[];
     'results'?: { label: string; value: string; }[];
   }
 
   interface IntrinsicElements {
-    'my-component': MyComponent;
+    'lauch-quiz': LauchQuiz;
   }
 }
 
@@ -46,7 +46,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
-      'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+      'lauch-quiz': LocalJSX.LauchQuiz & JSXBase.HTMLAttributes<HTMLLauchQuizElement>;
     }
   }
 }
